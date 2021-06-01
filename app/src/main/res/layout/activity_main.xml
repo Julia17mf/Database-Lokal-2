@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity">
+
+<!--  INPUT  -->
+    <TextView
+        android:id="@+id/judul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="INPUT DATA"
+        android:textSize="20pt"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"/>
+
+    <EditText
+        android:id="@+id/et_nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="21sp"
+        android:hint="Tanggal"
+        android:layout_below="@+id/judul"/>
+
+    <EditText
+        android:id="@+id/et_alamat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="21sp"
+        android:hint="Pemasukan Kotor"
+        android:layout_below="@+id/et_nama"/>
+
+    <EditText
+        android:id="@+id/et_mhs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="21sp"
+        android:hint="Pengeluaran Harian"
+        android:layout_below="@+id/et_alamat"/>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_alignParentBottom="true"/>
+
+<!--  OUTPUT  -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_shadow_end_color"
+        android:layout_margin="4dp"
+        android:layout_above="@+id/btn_submit"
+        android:layout_below="@+id/et_mhs">
+    </androidx.recyclerview.widget.RecyclerView>
+</RelativeLayout>
